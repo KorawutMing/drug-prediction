@@ -1,6 +1,6 @@
 from FlagEmbedding import BGEM3FlagModel
 
-MODEL = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
+MODEL = BGEM3FlagModel("BAAI/bge-m3", use_fp16=False, device="cuda")
 
 def genEmbs(texts: list):
     embs = MODEL.encode(
